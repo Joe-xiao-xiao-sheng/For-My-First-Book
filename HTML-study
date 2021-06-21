@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MyWorld.com</title>
+<style>
+.study{
+	color:green;
+	font-size:20px;
+}
+</style>
+<!--下面是定义一个id,class可以多个HTML元素使用，但id只能一个HTML元素使用，id元素也可以创建书签实现跳转-->
+<style>
+#title{
+	color:blue;
+	font-size:30px;
+	text-align:center;
+}
+</style>
+</head>
+<!--<body style="background-color:AliceBlue">-->
+
+
+<body background="bilibili.jpg">
+
+<h1 style="text-align:center;background-color:Aqua; font-family:arial; font-size:50px" >HTML学习</h1>
+<dl>
+	<dt>目录</dt>
+	<dd><a href="#tip文本">文本内容</a></dd>
+	<dd><a href="#tip图片及链接">图片及链接</a></dd>
+	<dd><a href="#tip表格">表格</a></dd>
+	<dd><a href="#tip列表">列表</a></dd>
+	<dd><a href="#tip内联框架"></a></dd>
+	<dd><a href="#tipJavaScript">JavaScript</a></dd>
+	<dd><a href="#tip表单">表单</a></dd>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="title"><a name="tip文本">文本内容</a></h2>
+<!--看也知道，font-size设置字体大小font family应该是字体-->
+<br/>
+<!--这是换行符-->
+<p><dfn title="Hellow World!">HW</dfn>   用dfn实现缩写</p> 
+<a name="tips"><strong>基本的注意事项</strong></a>
+<p>使用下表和上标<sub>下标</sub><sup>上标</sup>
+(&nbsp;)用来写空格
+</p>
+<!--这里可以看到下标用 sub 上标用 sup -->
+<P>体验加粗体（b)<b></b>    <strong>体验粗体（strong）</strong><i>体验斜体（i）</i>    <em>体验斜体（em）</em></p>
+<hr/>
+<!--这是分隔线-->
+<pre>这是预格式文本（pre）
+会保留原本格式
+也就是说       原本有几个空格
+就会显示几个空格
+
+
+换行也是如此
+下面来看看差别</pre>
+<!--这种标签很适合显示计算机代码-->
+<!--你可以自己运行尝试一下-->
+
+<p>这是预格式文本
+
+
+会保留原本格式
+也就是说       原本有几个空格
+就会显示几个空格
+
+
+换行也是如此
+
+下面来看看差别<br/>
+<abbr title="Hello World">HW</abbr>（abbr定义缩写，下面会有点）将鼠标移动到缩写位置可查看全称<br/>
+bdo定义逆序输出和顺序输出(dir的属性中ltr是顺序输出rtl是逆序输出)：<bdo dir="ltr">Hello World</bdo>隔开<bdo dir="rtl">Hello World</bdo><br/>
+<del>删除字</del>  <ins>插入字（下划线）</ins><br/>
+这是长的引用（blockquote），会自动生成边距
+<blockquote>
+这是长引用。这是长引用。这是长引用。这是长引用。这是长引用。
+这是长引用。这是长引用。这是长引用。这是长引用。这是长引用。
+</blockquote>
+这是短的引用，会自动加引号（q）
+<q>
+这是短的引用</q></p>
+<address style="text-align:right">address通常用于显示作者的信息，
+一般以斜体的方式呈现出来</address>
+<cite>cite一般用于定义著作的标题，且通常以斜体展示</cite>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="study">
+<hr/>
+<h2 id="title"><a name="tip图片及链接">图片以及链接</a></h2>
+<p>
+<strong font-size:30px> 注意路径：<br/>CSS中src="bilibili.jpg"表示当前文件夹啊下的bilibili.jpg文件<br/>
+而src="/新建文件夹/bilibili.jpg" 表示当前根目录下的 新建文件夹下的bilibili.jpg文件<br/>
+src="../新建文件夹/bilibili.jpg" 表示上一级文件夹中的新建文件夹下的bilibili.jpg文件<br/>
+在编写程序的过程中一般都用相对路径<br/></strong>
+<a href="https://www.bilibili.com/" target="_blank">
+<img src="bilibili.jpg" width="100" hight="100" alt="bilibili"></a>
+将B站链接放到图片上,traget的_blank用于创建新的窗口<br/>
+alt属性是当图片无法显示时的替换文本<br/>
+<h2>未设置对齐方式的图像：</h2>
+
+<p>图像 <img src ="学习通.jpg" width="100" hight="100"> 在文本中</p>
+
+<h2>已设置对齐方式的图像：</h2>
+
+<p>图像 <img src="学习通.jpg" width="100" hight="100" align="bottom"> 在文本中</p>
+
+<p>图像 <img src ="学习通.jpg" width="100" hight="100" align="middle"> 在文本中</p>
+
+<p>图像 <img src ="学习通.jpg" width="100" hight="100" align="top"> 在文本中</p>
+
+<p>请注意，bottom 对齐方式是默认的对齐方式。<br/>
+下面演示图片与其搭配的标题
+<figure>
+    	<img src = "bilibili.jpg"  width="200" alt="bilibili">
+	<figcaption>（bilibili）哔哩哔哩~~干杯</figcaption>
+</fegure>
+请点击图像上的星球，把它们放大。</p>
+<img
+src="eg_planets.jpg"
+border="0" usemap="#planetmap"
+alt="Planets" />
+
+<map name="planetmap" id="planetmap">
+
+<area
+shape="circle"
+coords="180,139,14"
+href ="venus.html"
+target ="_blank"
+alt="Venus" />
+
+<area
+shape="circle"
+coords="129,161,10"
+href ="merglobe.html"
+target ="_blank"
+alt="Mercury" />
+
+<area
+shape="rect"
+coords="0,0,110,260"
+href ="sun.html"
+target ="_blank"
+alt="Sun" />
+
+</map>
+
+<p><b>注释：</b>img 元素中的 "usemap" 属性引用 map 元素中的 "id" 或 "name" 属性（根据浏览器），所以我们同时向 map 元素添加了 "id" 和 "name" 属性。</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<hr/>
+<h2 id="title"><a name="tip表格">表格内容</a></h2>
+<p>table是定义表格，tr是行，td是格<br/>caption定义表格的表题，一般会自动居中,th定义表格的表头，一般会自动居中加粗体</p>
+<table border="3">
+<caption>标题</caption>
+<tr>
+<th>Heading</th>
+<th>Another Heading</th>
+</tr>
+<tr>
+<td> </td>
+<td width="100">ye</td>
+<td >ye</td>
+</tr>
+<tr>
+<td >ye</td>
+<td >zhi</td>
+<td >gang</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+<hr/>
+<h2 id="title"><a name="tip列表">列表内容</a></h2>
+<p>下面是无序列表 用type定义点（disc）圆（circle）方形（square）
+<ul type="disc">
+<li>西瓜</li>
+<li>芒果</li>
+</ul>
+<ul type="circle">
+<li>西瓜</li>
+<li>芒果</li>
+</ul>
+<ul type="square">
+<li>西瓜</li>
+<li>芒果</li>
+</ul>
+还可以嵌套表格，注意嵌套表格是会自动换标识的，这里没有定义type，但里面的还是自动变成circle了
+<ul>
+<li>西瓜</li>
+	<ul>
+	<li>西瓜</li>
+	<li>芒果</li>
+	</ul>
+<li>芒果</li>
+</ul>
+
+有序列表      加上start定义从几号开始 type定义类型  大写字母（A）小写字母（a）大写罗马数字（I）小写罗马数字（i）
+<ol type="I">
+<li>C++</li>
+<li>Java</li>
+<li>JavaScript</li>
+<li>Web</li>
+<li>C#</li>
+</ol>
+<ol start=3 type="A">
+<li>Python</li>
+<li>CSS</li>
+</ol>
+</p>
+
+
+
+
+
+
+<hr/>
+<h2 id="title"><a name="tip内联框架">内联框架</a></h2>
+<iframe src="https://www.bilibili.com/" width="800" height="600" name="iframe_1"></iframe>
+<p>内联框架有些老的浏览器并不支持<br/>还可以将链接匹配内联框架，让该链接在内联框架中打开<br/>例如下面的链接<a href="https://www.githubs.cn/" target="iframe_1">GitHub中文社区</a> <br/>由于链接的target（目标）属性指向内联框架，所以会在内联框架中打开Github中文社区</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr/>
+<h2 id="title"><a name="tipJavaScript">JavaScript</a></h2>
+<p id="demo">JavaScript 可以更改 HTML 元素的样式。</p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").style.fontSize = "25px"; 
+  document.getElementById("demo").style.color = "red";
+  document.getElementById("demo").style.backgroundColor = "yellow";        
+}
+</script>
+
+<script>
+function myFunction1() { 
+  document.getElementById("demo").innerHTML = "Hello JavaScript!";
+}
+</script>
+
+<button type="button" onclick="myFunction()">点击我！</button>
+<button type="button" onclick="myFunction1()">点击我！</button>
+
+
+
+
+
+
+<hr/>
+<h2 id="title"><a name="tip表单">表单</a></h2>
+<form action="Clun.php" target="_blank" method="GET" autocomplete="on">
+	<label for="input1" >input your name</label><br/>
+	<input id="input1" type="text" value="YE" readonly><br/>
+	<p>readonly设置不可更改，但会被提交，而disable不可以被提交<br/>
+		size用于设置字体大小
+		maxlength设置可输入的最大长度
+	</p>
+	<label for="input2">input your id</label><br/>
+	<input type="password" id="input2" value="939114779" autofocus><br>
+	<input type="submit" value="提交">
+
+	<br/>
+	<select name="select">
+		<option value="setletion1">selection1</option>
+		<option value="select2" selected>selection2</option>
+
+	</select>
+
+	<br/>
+    <form>
+	    <input  type="radio" name="test" value="first">fiest<br/>
+	    <input type="radio" name="test" value="second">second<br/>
+		<p >注意单选的话要把 name 属性 设置成一样的</p>
+	</form>
+
+	<br/>
+	<input type="checkbox" name="box1" value="A"><br/>
+	<input type="checkbox" name="box1" value="B"><br/>
+	<input type="checkbox" name="box1" value="C"><br/>
+	<input type="checkbox" name="box1" value="D"><br/>
+
+	<br/>
+	<input type="button" value="button1" onclick="alert('Hellow world')"><br/>
+
+	<br/>
+	<input type="color" name="color"><br/>
+
+	<br/>
+	<input type="date" name="today"><br/>
+
+</form>
+
+<object width="500" height="800" data="D:\\IDE\\JavaFX\\src\\javaFX\\QQlogin.java"></object>
+<Applet code="D:\\IDE\\JavaFX\\src\\javaFX\\QQlogin" width="500" height="800"></Applet>
+<a href="#tips">跳转到注意事项</a>
+</body>
+</html>
